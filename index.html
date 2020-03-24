@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapas | Lugares de Argentina</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row p-2">
+        <div class="col col-md-4 col-sm-12">
+            <h3>Lugares de <b>Argentina</b></h3>
+        </div>
+        <div class="col col-md-8 col-sm-12">
+            <form action="submit" class="form">
+                <div class="row">
+                    <div class="col-sm-12 col-md-2">
+                        <select name="selectProvincias" id="selectProvincias" class="cumtom-select custom-select-md">
+                            <option value="" selected disabled>Elija una provincia</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <select name="selectMostrar" id="selectMostrar" class="cumtom-select custom-select-md">
+                            <option value="" selected disabled>Elija opción a visualizar</option>
+                            <option value="departamentos">Departamentos</option>
+                            <option value="municipios">Municipios</option>
+                            <option value="localidades-censales">Localidades censales</option>
+                            <option value="asentamientos">Barrios</option>
+                            <option value="localidades">Localidades</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <button type="submit" id="btnConsultar" class="btn btn-primary">Consultar</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div id="mapa" class="container"></div>
+    <style>
+        #mapa {
+            height: 500px;
+        }
+    </style>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="js/API.js"></script>
+    <script src="js/UI.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
